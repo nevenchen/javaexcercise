@@ -51,7 +51,7 @@ public class PureJMSProducer {
         try {  
             jndiContext = new InitialContext();  
         } catch (NamingException e) {  
-            LOG.info("Could not create JNDI API context: " + e.toString());  
+            LOG.error("Could not create JNDI API context: " + e.toString());  
             System.exit(1);  
         }  
           
@@ -60,9 +60,9 @@ public class PureJMSProducer {
             broker = BrokerFactory.createBroker(new URI("broker:tcp://localhost:61616"));  
             broker.start();   
         } catch (URISyntaxException e) {  
-            LOG.info("Could not create broker: " + e.toString());  
+            LOG.error("Could not create broker: " + e.toString());  
         } catch (Exception e) {  
-            LOG.info("Could not create broker: " + e.toString());  
+            LOG.error("Could not create broker: " + e.toString());  
         }  
 //        try {  
 //            
@@ -75,7 +75,7 @@ public class PureJMSProducer {
             connectionFactory = (ConnectionFactory)jndiContext.lookup("ConnectionFactory");  
             destination = (Destination)jndiContext.lookup("MyTopic");  
         } catch (NamingException e) {  
-            LOG.info("JNDI API lookup failed: " + e);  
+            LOG.error("JNDI API lookup failed: " + e);  
             System.exit(1);  
         }  
           
@@ -103,9 +103,9 @@ public class PureJMSProducer {
              */  
             producer.send(session.createMessage());  
         } catch (JMSException e) {  
-            LOG.info("Exception occurred: " + e);  
+            LOG.error("Exception occurred: " + e);  
         } catch (InterruptedException e) {  
-            LOG.info("Exception occurred: " + e);  
+            LOG.error("Exception occurred: " + e);  
         } finally {  
             if (connection != null) {  
                 try {  
@@ -119,7 +119,7 @@ public class PureJMSProducer {
         try {  
             broker.stop();  
         } catch (Exception e) {  
-            LOG.info("stop the broker failed: " + e);  
+            LOG.error("stop the broker failed: " + e);  
         }  
     }  
   
