@@ -1,4 +1,4 @@
-package compare.comparator;
+package com.neven.java.basic.collection;
 
 public class BookType {
 

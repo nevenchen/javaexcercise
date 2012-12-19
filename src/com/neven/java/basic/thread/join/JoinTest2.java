@@ -1,4 +1,4 @@
-package thread.join1;
+package com.neven.java.basic.thread.join;
 
 
 class CustomThread1 extends Thread {       
@@ -47,7 +47,7 @@ public class JoinTest2 {
             t.start();  
             Thread.sleep(2000);       
             
-            t.join();//在代碼2里，將此處注釋掉       
+            t.join();//在代�?里，將此處注釋掉       
         } catch (Exception e) {       
             System.out.println("Exception from main");       
         }       

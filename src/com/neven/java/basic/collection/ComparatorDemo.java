@@ -1,4 +1,4 @@
-package compare.comparator;
+package com.neven.java.basic.collection;
 
 import java.util.Arrays;
 import java.util.Collections;

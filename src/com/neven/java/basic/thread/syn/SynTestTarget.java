@@ -1,6 +1,6 @@
-package thread.syn;
+package com.neven.java.basic.thread.syn;
 
-public class Target {
+public class SynTestTarget {
 
 	public synchronized void methodA() {
 		System.out.println("get into method a");

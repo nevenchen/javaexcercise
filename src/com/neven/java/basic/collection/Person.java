@@ -1,4 +1,4 @@
-package objectsort;
+package com.neven.java.basic.collection;
 
 public class Person {
 

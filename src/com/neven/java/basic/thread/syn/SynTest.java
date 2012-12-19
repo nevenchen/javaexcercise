@@ -1,7 +1,7 @@
-package thread.syn;
+package com.neven.java.basic.thread.syn;
 
 
-public class Client {
+public class SynTest {
 
 	/**
 	 * @Description:
@@ -13,7 +13,7 @@ public class Client {
 	 * @Exception:
 	 */
 	public static void main(String[] args) {
-		final Target target = new Target();
+		final SynTestTarget target = new SynTestTarget();
 		Thread t1 = new Thread(new Runnable(){
 			public void run(){
 				target.methodA();
