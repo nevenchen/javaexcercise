@@ -1,4 +1,4 @@
-package jodatimeTest;
+package com.neven.java.basic.time;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,6 +6,7 @@ import java.util.Date;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.joda.time.format.ISODateTimeFormat;
+
 
 
 public class JodaTimeTest {

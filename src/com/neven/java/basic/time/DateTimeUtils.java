@@ -1,4 +1,4 @@
-package jodatimeTest;
+package com.neven.java.basic.time;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
