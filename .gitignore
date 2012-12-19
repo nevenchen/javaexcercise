@@ -3,9 +3,8 @@
 #################
 
 *.pydevproject
-.project
 .metadata
-bin/
+classes/
 tmp/
 activemq-data/
 *.tmp
@@ -13,8 +12,6 @@ activemq-data/
 *.swp
 *~.nib
 local.properties
-.classpath
-.settings/
 .loadpath
 
 # External tool builders
