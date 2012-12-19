@@ -5,6 +5,7 @@
 *.pydevproject
 .metadata
 classes/
+target/
 tmp/
 activemq-data/
 *.tmp
