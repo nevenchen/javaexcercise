@@ -1,6 +1,5 @@
 package com.neven.java.basic.clone.deep;
 
-import java.beans.Transient;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
