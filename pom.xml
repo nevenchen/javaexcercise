@@ -25,28 +25,47 @@
 		</dependency>
 		
 		<dependency>
-			<groupId>org.apache.activemq</groupId>
-			<artifactId>activemq-core</artifactId>
-			<version>5.6.0</version>
+	      <groupId>org.apache.geronimo.specs</groupId>
+	      <artifactId>geronimo-jms_1.1_spec</artifactId>
+		  <version>1.1.1</version>
 		</dependency>
 		
 		<dependency>
-			<groupId>geronimo-spec</groupId>
-			<artifactId>geronimo-spec-jms</artifactId>
-			<version>1.1-rc4</version>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-all</artifactId>
+			<version>5.6.0</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.apache.xbean</groupId>
 			<artifactId>xbean-spring</artifactId>
 			<version>3.11.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok-maven-plugin</artifactId>
-			<version>0.11.4.0</version>
+			<artifactId>lombok</artifactId>
+			<version>0.11.4</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>20040616</version>
+		</dependency>
+            
             
             
 	  </dependencies>
