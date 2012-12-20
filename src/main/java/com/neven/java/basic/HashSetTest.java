@@ -9,13 +9,14 @@ public class HashSetTest {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Set set = new HashSet();
+		Set<Name> set = new HashSet<Name>();
 		Name n1 = new Name("neven","chen");
-		Name n2 = new Name("neven","chen");
+		Name n2 = new Name("nevenc","chen");
 		set.add(n1);
 		set.add(n2);
-//		System.out.println(set.size());
-//		System.out.println(set.contains(n2));
+		System.out.println(set.size());
+		System.out.println(set.contains(n1));
+		System.out.println(set.contains(n2));
 
 	}
 
@@ -43,11 +44,11 @@ class Name{
 
 	@Override
 	public boolean equals(Object o) {
-		System.out.println("Equls is called.");
-		if(o.getClass() == Name.class){
-			Name tem = (Name) o;
-			return tem.first.equals(this.first) && tem.last.equals(this.last);
-		}
-		return false;
+		System.out.println("Equls is called.");return false;
+//		if(o.getClass() == Name.class){
+//			Name tem = (Name) o;
+//			return tem.first.equals(this.first) && tem.last.equals(this.last);
+//		}
+//		return false;
 	}
 }

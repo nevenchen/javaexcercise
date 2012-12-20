@@ -1,6 +1,6 @@
-package com.neven.java.basic;
+package com.neven.java.basic.classtest;
 
-public class ClassInitSequence extends Father{
+public class ClassInitSequence extends SuperClass{
 
 	private int a;
 	static private int b;
@@ -27,7 +27,7 @@ public class ClassInitSequence extends Father{
 	}
 }
 
-class Father{
+class SuperClass{
 	private int a;
 	static private int b;
 	{
@@ -42,7 +42,7 @@ class Father{
 		System.out.println("Super Static block End.\n");
 	}
 	
-	public Father(){
+	public SuperClass(){
 		System.out.println("Super Constructure block Start:");
 		System.out.println("Super.a: "+a);
 		System.out.println("Super.b: "+b);

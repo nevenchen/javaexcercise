@@ -1,4 +1,4 @@
-package com.neven.java.basic;
+package com.neven.java.basic.classtest;
 
 public class ClassTest {
 

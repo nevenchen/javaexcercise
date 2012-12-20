@@ -1,23 +1,18 @@
 package com.neven.java.basic;
 
-public class ForEachTest {
+import java.util.ArrayList;
+import java.util.List;
 
-	/**
-	 * @param args
-	 */
+public class ForEachTest {
+	@SuppressWarnings("null")
 	public static void main(String[] args) {
-		People people = new ForEachTest().new People();
-//		for(String s : people.getFriends()){
-//			System.out.println(s);
-//		}
-		StringBuilder emails = new StringBuilder();
-		System.out.println(emails.toString()+"]]]");
-	}
-	
-	class People{
-		String[] friends;
-		public String[] getFriends(){
-			return null;
+		for (Object s : new ArrayList<String>()) {
+			System.out.println(s);
+		}
+
+		List<?> temp = null;
+		for (Object obj : temp) {
+			System.out.println(obj);
 		}
 	}
 

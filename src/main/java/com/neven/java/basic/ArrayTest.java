@@ -6,8 +6,9 @@ import java.util.List;
 
 public class ArrayTest {
 	public static void main(String[] args){
-//		splitTest();
-		stringArray2List();
+		splitTest();
+//		stringArray2List();
+		nullElement();
 	}
 	
 	public static void nullElement(){
@@ -16,30 +17,31 @@ public class ArrayTest {
 		System.out.println(strs[0]);
 	}
 	public static void splitTest(){
-		String arg = "a;;;;;";
-		String[] args = arg.split(";");
-		System.out.println(Arrays.asList(args));
-		System.out.println(Arrays.asList(arg).size());
+		String[] emptyStrArrays = new String[]{"","",""};
+		System.out.println("emptyStrArrays Length: " + emptyStrArrays.length);
+		System.out.println("emptyStrArrays to List Length: " + emptyStrArrays.length);
+		System.out.println("emptyStrArrays AS String: " + Arrays.toString(emptyStrArrays));
+		System.out.println("emptyStrArrays AS List: " + Arrays.asList(emptyStrArrays));
 		
-		String to = "";
-
-		for (String email : args) {
-			to += email + ";";
-		}
-		System.out.println(to);;
+		String arg = "aaa";
+//		String arg = "aaaB"; //Try to test with this one
+		String[] args = arg.split("a");
+		System.out.println(Arrays.toString(args));
+		System.out.println(Arrays.asList(args));
+		System.out.println("Array Lenth: "+args.length);
 	}
 	
 	public static void stringArray2List(){
 		String[] temps = new String[]{"789","890"};
+		System.out.println(Arrays.toString(temps));
+		
 		List<String> lis = new ArrayList<String>();
 		lis.add("asdf");
 		lis.add("123");
 		lis.add("456");
 		
 		temps = lis.toArray(new String[0]);
-		for(String tem : temps){
-			System.out.println(tem);
-		}
+		System.out.println(Arrays.toString(temps));
 		
 	}
 }
