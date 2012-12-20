@@ -15,7 +15,6 @@
 	      <groupId>junit</groupId>
 	      <artifactId>junit</artifactId>
 	      <version>4.8.2</version>
-	      <scope>test</scope>
 	    </dependency>
 	    
 	    <dependency>
@@ -73,6 +72,14 @@
 	 <build> 
 	  <finalName>javen</finalName>
 	  <plugins>
+	  	<plugin> 
+		    <groupId>org.apache.maven.plugins</groupId> 
+		    <artifactId>maven-resources-plugin</artifactId> 
+		    <version>2.4</version> 
+		    <configuration> 
+		        <encoding>UTF-8</encoding> 
+		    </configuration> 
+		</plugin> 
 	  	<plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
