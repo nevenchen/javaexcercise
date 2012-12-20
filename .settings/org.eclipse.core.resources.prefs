@@ -1,15 +1,5 @@
+#Thu Dec 20 13:14:22 CST 2012
 eclipse.preferences.version=1
-encoding//src/com/neven/java/basic/P.java=UTF-8
-encoding//src/com/neven/java/basic/Recursion.java=UTF-8
-encoding//src/com/neven/java/basic/StaticTest.java=UTF-8
-encoding//src/com/neven/java/basic/classtest/FieldTakeClass.java=UTF-8
-encoding//src/com/neven/java/basic/classtest/InitialOrderTest.java=UTF-8
-encoding//src/com/neven/java/basic/classtest/InitialOrderTestStength.java=UTF-8
-encoding//src/com/neven/java/basic/collection/Comparators.java=UTF-8
-encoding//src/com/neven/java/basic/collection/Person.java=UTF-8
-encoding//src/com/neven/java/basic/finallize/Chair.java=UTF-8
-encoding//src/com/neven/java/basic/finallize/Garbage.java=UTF-8
-encoding//src/com/neven/java/basic/thread/prod_consum/HambSys.java=UTF-8
-encoding//src/com/neven/java/basic/thread/syn/SynFail.java=UTF-8
-encoding//src/com/neven/java/basic/time/DateTimeUtils.java=UTF-8
-encoding/<project>=GBK
+encoding//src/main/java/com/neven/java/basic/classtest/RecursionConstructure.java=UTF-8
+encoding//src/main/java/com/neven/java/basic/clone/Professor.java=UTF-8
+encoding/<project>=UTF-8
