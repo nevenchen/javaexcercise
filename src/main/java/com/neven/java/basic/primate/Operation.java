@@ -1,5 +1,7 @@
 package com.neven.java.basic.primate;
 
+import java.util.Random;
+
 import org.junit.Test;
 
 public class Operation {
@@ -135,5 +137,56 @@ public class Operation {
 		System.out.println(Math.ceil(-11.5));
 		System.out.println(Math.ceil(-11.6));
 		System.out.println(Math.ceil(-11.9));
+	}
+	
+	/**
+上面的程序目的是等概率的打印 Pain、Gain、Main 三个单词，但多次运行程序却发现永远只会打印 ain，这是为什么？
+
+第一个问题在于：rnd.nextInt(2)只会返回0、1 两个数字，所以上面只会走case 1: 的分支语句，case 2: 按理是永远不会走的。
+
+第二个问题在于：如果case语句不以break结束时，则一直会往向运行，即直到执行到break的case语句止，所以上面的的语句每次都会执行default分支语句。
+
+第三个问题在于：StringBuffer的构造函数有两种可接受参数的，一个是StringBuffer(int capacity)、另一个是StringBuffer(String str)，上面用的是StringBuffer(char)构造函数，实质上运行时将字符型转换成了int型，这样将字符当作StringBuffer的初始容量了，而不是字符本身。
+
+	 */
+	@Test
+	public void caseStatementA(){
+		Random rnd = new Random();
+		StringBuffer word = null;
+		switch (rnd.nextInt(2)) {
+		case 1:
+			word = new StringBuffer('P');
+		case 2:
+			word = new StringBuffer('G');
+		default:
+			word = new StringBuffer('M');
+		}
+		word.append('a');
+		word.append('i');
+		word.append('n');
+		System.out.println(word);
+
+	}
+
+	@Test
+	public void caseStatementB(){
+		Random rnd = new Random();
+		StringBuffer word = null;
+		switch (rnd.nextInt(3)) {
+		case 1:
+			word = new StringBuffer("P");
+			break;
+		case 2:
+			word = new StringBuffer("G");
+			break;
+		default:
+			word = new StringBuffer("M");
+			break;// 可以不要
+
+		}
+		word.append('a');
+		word.append('i');
+		word.append('n');
+		System.out.println(word);
 	}
 }
