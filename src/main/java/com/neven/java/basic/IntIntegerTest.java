@@ -35,6 +35,7 @@ public class IntIntegerTest {
 		System.out.println(("integer127A=integer127B: ") + (integer127A == integer127B));
 	}
 
+	@SuppressWarnings("static-access")
 	@Test
 	public void method2() {
 		Integer a1 = 200;
@@ -52,6 +53,7 @@ public class IntIntegerTest {
 
 	}
 
+	@SuppressWarnings({"unused" })
 	@Test
 	public void method3() {
 		System.out.println(Integer.MAX_VALUE + 1);
@@ -71,6 +73,7 @@ public class IntIntegerTest {
 	 * 
 	 * @Exception:
 	 */
+	@SuppressWarnings({ "unused", "null" })
 	@Test
 	public void method4() {
 		/*
