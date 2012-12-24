@@ -10,7 +10,6 @@ public class SysTest {
 		System.out.println(java.nio.charset.Charset.defaultCharset());//1.5
 		System.out.println("currentTimeMillis: "+System.currentTimeMillis());
 		System.out.println("identityHashCode: "+System.identityHashCode(new Integer(2)));
-		System.out.println("lineSeparator: "+System.lineSeparator());
 		System.out.println("nanoTime: "+System.nanoTime());
 		System.out.println("getenv: "+System.getenv());
 		System.out.println("getProperties: "+System.getProperties());
