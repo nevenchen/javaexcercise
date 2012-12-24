@@ -48,6 +48,7 @@ import java.util.Collection;
  * @author Paul Jack
  * @author Stephen Colebourne
  */
+@SuppressWarnings("rawtypes")
 public interface Buffer extends Collection {
 
     /**

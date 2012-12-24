@@ -32,6 +32,7 @@ import java.util.Locale;
  *
  * @author Yauheny Mikulski
  */
+@SuppressWarnings("rawtypes")
 public class LocaleConvertUtils {
 
     // ----------------------------------------------------- Instance Variables

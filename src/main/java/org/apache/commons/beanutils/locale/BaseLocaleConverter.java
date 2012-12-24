@@ -34,7 +34,7 @@ import java.util.Locale;
  *
  * @author Yauheny Mikulski
  */
-
+@SuppressWarnings("rawtypes")
 public abstract class BaseLocaleConverter implements LocaleConverter {
 
     // ----------------------------------------------------- Instance Variables
@@ -195,7 +195,7 @@ public abstract class BaseLocaleConverter implements LocaleConverter {
      * @exception ConversionException if conversion cannot be performed
      *  successfully
      */
-    public Object convert(Class type, Object value) {
+	public Object convert(Class type, Object value) {
         return convert(type, value, null);
     }
 

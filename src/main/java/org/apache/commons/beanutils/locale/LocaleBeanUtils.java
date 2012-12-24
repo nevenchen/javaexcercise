@@ -39,7 +39,7 @@ import java.util.Locale;
  * @author Gregor Rayman
  * @author Yauheny Mikulski
  */
-
+@SuppressWarnings("rawtypes")
 public class LocaleBeanUtils extends BeanUtils {
 
 

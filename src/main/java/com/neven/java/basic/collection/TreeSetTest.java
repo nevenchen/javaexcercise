@@ -1,4 +1,4 @@
-package com.neven.java.basic;
+package com.neven.java.basic.collection;
 
 import java.util.Set;
 import java.util.TreeSet;
@@ -10,8 +10,8 @@ public class TreeSetTest {
 	 */
 	public static void main(String[] args) {
 		Set set = new TreeSet();
-		Person n1 = new Person("neven","chen");
-		Person n2 = new Person("neven","chen");
+		People n1 = new People("neven","chen");
+		People n2 = new People("neven","chen");
 		set.add(n1);
 		set.add(n2);
 		System.out.println(set.size());
@@ -21,11 +21,11 @@ public class TreeSetTest {
 
 	
 }
-class Person implements Comparable{
+class People implements Comparable{
 	private String first;
 	private String last;
 	
-	Person(String first, String last){
+	People(String first, String last){
 		this.first=first;
 		this.last=last;
 	}
@@ -45,8 +45,8 @@ class Person implements Comparable{
 	@Override
 	public boolean equals(Object o) {
 		System.out.println("Equls is called.");
-		if(o.getClass() == Person.class){
-			Person tem = (Person) o;
+		if(o.getClass() == People.class){
+			People tem = (People) o;
 			return tem.first.equals(this.first) && tem.last.equals(this.last);
 		}
 		return false;
@@ -55,8 +55,8 @@ class Person implements Comparable{
 	@Override
 	public int compareTo(Object o) {
 		System.out.println("compareTo is called.");
-		if(o.getClass() == Person.class){
-			Person tem = (Person) o;
+		if(o.getClass() == People.class){
+			People tem = (People) o;
 			return (tem.first.equals(this.first) && tem.last.equals(this.last))?0:1;
 		}
 		return 0;

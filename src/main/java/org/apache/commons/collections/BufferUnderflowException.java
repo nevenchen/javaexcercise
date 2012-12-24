@@ -32,6 +32,7 @@ import java.util.NoSuchElementException;
  * @author Paul Jack
  * @author Stephen Colebourne
  */
+@SuppressWarnings("serial")
 public class BufferUnderflowException extends NoSuchElementException {
     
     /** The root cause throwable */

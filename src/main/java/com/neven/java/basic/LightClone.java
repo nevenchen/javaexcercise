@@ -2,6 +2,7 @@ package com.neven.java.basic;
 
 public class LightClone {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		MyClone myClone1 = new MyClone("clone1");
 		myClone1.rc.refer = "AAAAAAAAAAAAA";

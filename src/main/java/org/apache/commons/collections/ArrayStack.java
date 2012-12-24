@@ -47,6 +47,7 @@ import java.util.EmptyStackException;
  * @author Paul Jack
  * @author Stephen Colebourne
  */
+@SuppressWarnings("rawtypes")
 public class ArrayStack extends ArrayList implements Buffer {
 
     /** Ensure serialization compatibility */    
@@ -138,7 +139,8 @@ public class ArrayStack extends ArrayList implements Buffer {
      * @param item  the item to be added
      * @return the item just pushed
      */
-    public Object push(Object item) {
+    @SuppressWarnings("unchecked")
+	public Object push(Object item) {
         add(item);
         return item;
     }

@@ -1,8 +1,11 @@
-package com.neven.java.basic;
+package com.neven.java.basic.primate;
 
-public class ObjecEqual {
+import org.junit.Test;
 
-	public static void main(String[] args) {
+public class ObjectTest {
+
+	@Test
+	public void equalsTest(){
 		yu yu1 = new yu();
 		yu yu2 = new yu();
 		yu yu3 = yu1;

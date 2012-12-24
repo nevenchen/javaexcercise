@@ -27,7 +27,7 @@ import org.apache.commons.beanutils.Converter;
  *
  * @author Yauheny Mikulski
  */
-
+@SuppressWarnings("rawtypes")
 public interface LocaleConverter extends Converter {
 
 

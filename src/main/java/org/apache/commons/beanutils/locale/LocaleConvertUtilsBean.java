@@ -83,6 +83,7 @@ import java.util.Set;
  * @author Yauheny Mikulski
  * @since 1.7
  */
+@SuppressWarnings({"rawtypes","unchecked"})
 public class LocaleConvertUtilsBean {
     
     /** 
@@ -507,7 +508,8 @@ public class LocaleConvertUtilsBean {
      * releases (where FastHashMap is exposed in the API), but
      * use WeakHashMap to resolve memory leaks.
      */
-    private static class DelegateFastHashMap extends FastHashMap {
+    @SuppressWarnings("serial")
+	private static class DelegateFastHashMap extends FastHashMap {
 
         private final Map map;
 
@@ -544,7 +546,7 @@ public class LocaleConvertUtilsBean {
         public Object put(Object key, Object value) {
             return map.put(key, value);
         }
-        public void putAll(Map m) {
+		public void putAll(Map m) {
             map.putAll(m);
         }
         public Object remove(Object key) {

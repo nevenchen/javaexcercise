@@ -63,6 +63,7 @@ import java.util.Set;
  * @author Craig R. McClanahan
  * @author Stephen Colebourne
  */
+@SuppressWarnings({ "rawtypes", "serial","unchecked" })
 public class FastHashMap extends HashMap {
 
     /**
@@ -264,7 +265,7 @@ public class FastHashMap extends HashMap {
      *
      * @param in  the map whose mappings are to be copied
      */
-    public void putAll(Map in) {
+	public void putAll(Map in) {
         if (fast) {
             synchronized (this) {
                 HashMap temp = (HashMap) map.clone();
