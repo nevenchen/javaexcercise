@@ -12,6 +12,6 @@ public class C implements B,A {
 
   @Override
   public void test() {
-    
+
   }
 }

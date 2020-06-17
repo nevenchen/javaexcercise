@@ -16,6 +16,7 @@ public class ReadWriteLock {
   Lock writeLock = lock.writeLock();
 
   public void out(){
+    System.out.println(Thread.currentThread().getName()+"尝试获得锁");
     readLock.lock();
     System.out.println(Thread.currentThread().getName()+"进入out获得锁");
     try {
@@ -29,6 +30,12 @@ public class ReadWriteLock {
   }
 
   public void increase(){
+    System.out.println(Thread.currentThread().getName()+"尝试获得锁");
+    try {
+      Thread.sleep(2000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
     writeLock.lock();
     System.out.println(Thread.currentThread().getName()+"进入increase获得锁");
     try {
@@ -48,16 +55,17 @@ public class ReadWriteLock {
     ReadWriteLock reentrantReadWriteLockDemo = new ReadWriteLock();
 
 
-    new Thread(()->{
-      reentrantReadWriteLockDemo.out();
-    },"线程1").start();
 
     new Thread(()->{
       reentrantReadWriteLockDemo.out();
-    },"线程2").start();
+    },"读线程1").start();
 
     new Thread(()->{
       reentrantReadWriteLockDemo.increase();
-    },"线程3").start();
+    },"写线程3").start();
+
+    new Thread(()->{
+      reentrantReadWriteLockDemo.out();
+    },"读线程2").start();
   }
 }
